@@ -18,3 +18,4 @@
 https://www.omdbapi.com/ (cannot filter by genre or release date)
 
 https://developer.themoviedb.org/docs (has a small limit and the genres are funky to navigate)
+
