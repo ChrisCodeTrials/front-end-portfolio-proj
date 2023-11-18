@@ -1,0 +1,40 @@
+/* My coolor palette */
+:root {
+    --penn-blue: #0a1045ff;
+    --robin-egg-blue: #00c2d1ff;
+    --aureolin: #f9e900ff;
+    --sandy-brown: #f6af65ff;
+    --shocking-pink: #ed33b9ff;
+}
+
+html {
+    background-color: var(--penn-blue);
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+label{
+    color: var(--aureolin);
+}
+.cmdb-logo {
+    padding-left: 100px;
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--shocking-pink);
+}
+
+article {
+    color: white;
+}
+
+.poster {
+    width: 200px;
+}

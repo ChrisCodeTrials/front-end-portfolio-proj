@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>What Should I Watch?</title>
+    <script defer src="./apiKey.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+
 </head>
 <body>
-    
-</body>
-</html>
+    <header>
+        <div class="cmdb-logo">
+            <img src="./assets/cmdbLogo.png" alt="CMDB Logo" width="200px" height="200px">
+        </div>
+        <h1>What are we watching today?</h1>
+    </header>
+    <form>
+
+        <label for="genre">Choose a Genre:</label>
+        <select name="genre" id="genre" required>
+            <option value="">--Genres--</option>
+            <option value="28">Action</option>
+            <option value="12">Adventure</option>
+            <option value="16">Animation</option>
+            <option value="35">Comedy</option>
+            <option value="80">Crime</option>
+            <option value="99">Documentary</option>
+            <option value="18">Drama</option>
+            <option value="10751">Family</option>
+            <option value="14">fantasy</option>
+            <option value="36">History</option>
+            <option value="27">Horror</option>
+            <option value="10402">Music</option>
+            <option value="9648">Mystery</option>
+            <option value="10749">Romance</option>
+            <option value="878">Science Fiction</option>
+            <option value="10770">Tv Movie</option>
+            <option value="53">Thriller</option>
+            <option value="10752">War</option>
+            <option value="37">Western</option>
+        </select>
+        <!-- <button class="genre-submit" type="button">Next Option</button> -->
+        <br>
+        <!-- <div class="language" style="visibility: hidden;"> -->
+            <label for="language-sel">Choose Recommendation Language:</label>
+            <select name="language-sel" id="language-sel" required>
+                <option value="">--Language--</option>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="zh">Chinese</option>
+                <option value="ru">Russian</option>
+            </select>
+            <!-- <button class="lang-submit" type="button">Next Option</button> -->
+        </div>
+        <br>
+        <!-- <div class="rating" style="visibility: hidden;"> -->
+            <label for="rating">User Rating: </label>
+            <input type="number" id="rating-input" name="rating-input" min="0" max="10" step="0.1" required>
+            <button class="form-submit" type="submit">Find Movies</button>
+        </div>
+    </form> 
+        <main>
+            <!-- <article>
+                <h2>Title: </h2>
+                
+                <p>Language: </p>
+                <p>User's Rating: </p>
+                <p>Genre: </p>
+                <p>Description: </p>
+            </article> -->
+        </main>
+        <button class="show-more-button" type="submit" style="visibility: hidden;">Find More Movies</button>
+    </body>
+    </html>

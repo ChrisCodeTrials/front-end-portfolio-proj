@@ -8,7 +8,8 @@
 - get started on the HTML and CSS
 - sample simple JS to see how the api is displayed on my website
     - structure how I will use the api
-        - the user will be able to select a genre, then on the next screen choose a year(or range of years), and finally  
+        - the user will be able to select a genre, then on the next screen choose a year(or range of years)
+        - the user will be able to see related movies when they click on it from the generated movies
     - if it works well, how can I apply the user stories to functions of my website?
 
 
