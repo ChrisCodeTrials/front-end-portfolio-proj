@@ -53,7 +53,7 @@ function getRandomGenreAndRating() {
         { value: 53, text: "Thriller" },
         { value: 10752, text: "War" },
         { value: 37, text: "Western" }
-    ];
+    ]
 
     var ratingOptions = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 
@@ -153,7 +153,7 @@ function fetchMovies(genreId, originalLanguage, userRating) {
     .then(res => res.json())
     .then(json => {
         if (json.results && json.results.length > 0) {
-            displayMovies(json.results.splice(0,9));
+            displayMovies(json.results.splice(0,9))
         } else {
             console.error('No movie data found.')
         }
