@@ -85,7 +85,7 @@ form.addEventListener("submit", (event) => {
     fetchMovies(genreId, originalLanguage, userRating)
 })
 
-showMoreButton.addEventListener("click", (event) => {
+showMoreButton.addEventListener("click", () => {
     const genreSelect = form.elements["genre"]
     const languageSelect = form.elements["language-sel"]
     const ratingInput = form.elements["rating-input"]
@@ -153,12 +153,12 @@ function fetchMovies(genreId, originalLanguage, userRating) {
     .then(res => res.json())
     .then(json => {
         if (json.results && json.results.length > 0) {
-            displayMovies(json.results.splice(0,5));
+            displayMovies(json.results.splice(0,9));
         } else {
             console.error('No movie data found.')
         }
     })
-    .catch(err => console.error('Error: ' + err))
+ .catch(err => alert(`There was an issue accessing the API! 🙀 \n ${err}`))
 }
 
 
