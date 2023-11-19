@@ -17,7 +17,6 @@
         <h1>What are we watching today?</h1>
     </header>
     <form>
-
         <label for="genre">Choose a Genre:</label>
         <select name="genre" id="genre" required>
             <option value="">--Genres--</option>
@@ -41,9 +40,7 @@
             <option value="10752">War</option>
             <option value="37">Western</option>
         </select>
-        <!-- <button class="genre-submit" type="button">Next Option</button> -->
         <br>
-        <!-- <div class="language" style="visibility: hidden;"> -->
             <label for="language-sel">Choose Recommendation Language:</label>
             <select name="language-sel" id="language-sel" required>
                 <option value="">--Language--</option>
@@ -57,25 +54,18 @@
                 <option value="zh">Chinese</option>
                 <option value="ru">Russian</option>
             </select>
-            <!-- <button class="lang-submit" type="button">Next Option</button> -->
         </div>
         <br>
-        <!-- <div class="rating" style="visibility: hidden;"> -->
             <label for="rating">User Rating: </label>
             <input type="number" id="rating-input" name="rating-input" min="0" max="10" step="0.1" required>
             <button class="form-submit" type="submit">Find Movies</button>
         </div>
     </form> 
         <main>
-            <!-- <article>
-                <h2>Title: </h2>
-                
-                <p>Language: </p>
-                <p>User's Rating: </p>
-                <p>Genre: </p>
-                <p>Description: </p>
-            </article> -->
         </main>
         <button class="show-more-button" type="submit" style="visibility: hidden;">Find More Movies</button>
+        <div>
+            <p id="error-message" style="display: none;"></p>
+        </div>
     </body>
     </html>
