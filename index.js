@@ -1,5 +1,4 @@
 function getGenreByValue(value) {
-    // Array of option elements
     var options = [
         { value: "", text: "--Genres--" },
         { value: 28, text: "Action" },
@@ -87,9 +86,9 @@ form.addEventListener("submit", (event) => {
 })
 
 showMoreButton.addEventListener("click", (event) => {
-    const genreSelect = event.target.form.elements["genre"]
-    const languageSelect = event.target.form.elements["language-sel"]
-    const ratingInput = event.target.form.elements["rating-input"]
+    const genreSelect = form.elements["genre"]
+    const languageSelect = form.elements["language-sel"]
+    const ratingInput = form.elements["rating-input"]
 
     const genreId = genreSelect.value
     const originalLanguage = languageSelect.value
@@ -154,7 +153,7 @@ function fetchMovies(genreId, originalLanguage, userRating) {
     .then(res => res.json())
     .then(json => {
         if (json.results && json.results.length > 0) {
-            displayMovies(json.results);
+            displayMovies(json.results.splice(0,5));
         } else {
             console.error('No movie data found.')
         }
