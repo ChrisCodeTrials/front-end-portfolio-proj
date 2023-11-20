@@ -55,6 +55,7 @@ h1 {
     font-weight: bolder;
     font-size: 50px;
     color: var(--sandy-brown);
+    text-shadow: var(--penn-blue) 4px 0 3px;
 }
 h2 {
     color: var(--robin-egg-blue);
@@ -71,6 +72,7 @@ a {
 ul {
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
 }
 li {
     font-size: 20px;
@@ -80,8 +82,12 @@ li {
 	        animation: slide-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .journey{
+    display: grid;
+    margin: 0 auto;
+    text-shadow: var(--penn-blue) 3px 0 2px;
     -webkit-animation: slide-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
 }
 
 
@@ -146,5 +152,18 @@ li {
     100% {
       -webkit-transform: translateX(0);
               transform: translateX(0);
+    }
+}
+@media (max-width: 950px){
+    main {
+        grid-template-columns: 1fr;
+        
+    }
+    p {
+        width: 500px;
+    }
+    .journey {
+        display: grid;
+        margin: 0 auto;
     }
 }
