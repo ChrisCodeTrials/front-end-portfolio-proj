@@ -69,6 +69,12 @@ a {
 .chris:hover{
     color: var(--shocking-pink);
 }
+.miranda {
+    color: white;
+}
+.miranda:hover{
+    color: var(--aureolin);
+}
 ul {
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
