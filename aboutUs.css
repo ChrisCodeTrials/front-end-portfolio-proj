@@ -1,0 +1,27 @@
+body,
+html{
+    margin-top: 150px;
+    padding: 0;
+}
+:root {
+    --penn-blue: #0a1045ff;
+    --robin-egg-blue: #00c2d1ff;
+    --aureolin: #f9e900ff;
+    --sandy-brown: #f6af65ff;
+    --shocking-pink: #ed33b9ff;
+}
+html{
+    background-color: var(--sandy-brown);
+}
+p {
+    border: 2px solid black;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+main img {
+    width: 600px;
+}
+

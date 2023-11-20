@@ -65,6 +65,11 @@ function getRandomGenreAndRating() {
         rating: ratingOptions[randomRatingIndex]
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const { genre: randomGenreId, rating: randomRating } = getRandomGenreAndRating()
+
+    fetchMovies(randomGenreId, 'en', randomRating)
+})
 
 const form = document.querySelector("form")
 const main = document.querySelector("main")
@@ -81,8 +86,14 @@ form.addEventListener("submit", (event) => {
     const genreId = genreSelect.value
     const originalLanguage = languageSelect.value
     const userRating = ratingInput.value
-
-    fetchMovies(genreId, originalLanguage, userRating)
+    
+    const divError = document.querySelector("#error-message")
+    if (!genreId || !userRating || !originalLanguage){
+        divError.style.display= "block"
+    } else {
+        divError.style.display= "none"
+        fetchMovies(genreId, originalLanguage, userRating)
+    }
 })
 
 showMoreButton.addEventListener("click", () => {
@@ -113,32 +124,17 @@ function displayMovies(movieList) {
             genreList.push(getGenreByValue(genre))
         })
 
-        article.innerHTML = `<h2>${title}</h2>
+        article.innerHTML = `<h2><strong>${title}</strong></h2>
         <img class="poster" src="https://image.tmdb.org/t/p/original${poster_path}" alt="">
-            <p>Original Language: ${original_language}</p>
-            <p>User's Rating: ${vote_average}</p>
-            <p>Genre: ${genreList}</p>
-            <p>Description: ${overview}</p>`
+            <p><strong>Original Language:</strong> ${original_language}</p>
+            <p><strong>User's Rating:</strong> ${vote_average}</p>
+            <p><strong>Genre:</strong> ${genreList}</p>
+            <p >Description: ${overview}</p>`
 
         main.appendChild(article)
     })
     showMoreButton.style.visibility = "visible"
-
 }
-
-function errorMessage(error){
-    const divError = document.querySelector(".error-message")
-    divError.style.display= "block"
-
-    divError.innerHTML= `<h1>There was an issue accessing the API! 🙀<h1>
-    <p id="error-message">${error}</p>`
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    const { genre: randomGenreId, rating: randomRating } = getRandomGenreAndRating()
-
-    fetchMovies(randomGenreId, 'en', randomRating)
-})
 
 function fetchMovies(genreId, originalLanguage, userRating) {
     const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=${originalLanguage}&page=${pageNumber}&sort_by=popularity.desc&vote_average.gte=${userRating}&with_genres=${genreId}`

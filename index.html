@@ -7,13 +7,17 @@
     <script defer src="./apiKey.js"></script>
     <link rel="stylesheet" href="./style.css">
     <script defer src="./index.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
 </head>
 <body>
     <header>
-        <div class="cmdb-logo">
-            <img src="./assets/cmdbLogo.png" alt="CMDB Logo" width="200px" height="200px">
-        </div>
+        <a href="./aboutUs.html">
+
+            <div class="cmdb-logo">
+                <img src="./assets/cmdbLogo.png" alt="CMDB Logo" width="200px" height="200px">
+            </div>
+        </a>
         <h1>What are we watching today?</h1>
     </header>
     <br>
@@ -21,7 +25,7 @@
         <div>
             <label for="genre">Choose a Genre</label>
             <br>
-            <select name="genre" id="genre" required>
+            <select name="genre" id="genre" >
                 <option value="">----Genres----</option>
                 <option value="28">Action</option>
                 <option value="12">Adventure</option>
@@ -45,15 +49,15 @@
             </select>
         </div>
         <div>
-            <label for="rating">User Rating</label>
+            <label for="rating-input">User Rating</label>
             <br>
-            <input type="number" id="rating-input" name="rating-input" min="0" max="10" step="0.1" required>
+            <input type="number" id="rating-input" name="rating-input" min="0" max="10" step="0.1" >
         </div>
         <div>
             
             <label for="language-sel">Choose Your Language</label>
             <br>
-            <select name="language-sel" id="language-sel" required>
+            <select name="language-sel" id="language-sel">
                 <option value="">----Language----</option>
                 <option value="en">English</option>
                 <option value="es">Spanish</option>
@@ -68,6 +72,7 @@
         </div>
         <button class="form-submit" type="submit">Find Movies</button>
     </form> 
+    <div id="error-message" style="display: none; color: red; border: 2px solid red;">You Must choose a Rating, Genre, and Language </div>
     <br>
         <main>
         </main>
