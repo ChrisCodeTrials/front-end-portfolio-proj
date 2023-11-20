@@ -129,7 +129,7 @@ function displayMovies(movieList) {
             <p><strong>Original Language:</strong> ${original_language}</p>
             <p><strong>User's Rating:</strong> ${vote_average}</p>
             <p><strong>Genre:</strong> ${genreList}</p>
-            <p >Description: ${overview}</p>`
+            <p><strong>Description</strong>: ${overview}</p>`
 
         main.appendChild(article)
     })

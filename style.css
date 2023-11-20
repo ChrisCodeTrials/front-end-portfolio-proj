@@ -44,14 +44,20 @@ h1 {
 	        animation: slide-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 }
-
+h2 {
+    color: var(--sandy-brown);
+    font-size: 30px;
+    text-shadow: black 2px 0 11px;
+}
 
 .poster {
     width: 200px;
+    box-shadow: black 3px 0 9px;
 }
 article:hover {
     border: 3px solid var(--aureolin);
-    color: black;
+    color: var(--aureolin);
+    background-color: var(--shocking-pink);
 }
 
 main {
@@ -88,6 +94,9 @@ form select {
     height: 25px;
     font-size: 20px;
     text-align: center;
+}
+p {
+    text-shadow: black 1px 0 1px;
 }
 .form-submit{
     margin: 0 auto;
@@ -208,14 +217,14 @@ form select {
 }
 
 .movie {
-    border: 2px solid var(--shocking-pink);
+    border: 2px solid var(--aureolin);
     background-color: var(--robin-egg-blue);
     display: block;
     margin: 10px 0;
     text-align: center;
     border-radius: 3%;
     box-shadow: var(--sandy-brown) 1px 0 12px;
-    color: var(--aureolin);
+    color: var(--shocking-pink);
     -webkit-animation: slide-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
